@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Meta -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Frontend Developer Portfolio - Building innovative and user-friendly digital solutions." />
+        <title>Frontend Developer Portfolio</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="64x64" href="img/assets/logo.png">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <script src="https://unpkg.com/lucide@latest"></script>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles/style.css" />
+    </head>
+
+    <body>
+
+        <!-- ================= NAVBAR ================= -->
+        <header>
+            <nav class="navbar">
+                <div class="nav-container">
+
+                    <div class="logo">
+                        <a href="#home">
+                            <img src="img/assets/logo.png" alt="Marc Canlas Logo">
+                        </a>
+                    </div>
+
+                    <ul class="nav-links" id="nav-links">
+
+                        <li><a href="#home" class="nav-item active">
+                            <i class="fas fa-home"></i><span>Home</span>
+                        </a></li>
+
+                        <li><a href="#about" class="nav-item">
+                            <i class="fas fa-user"></i><span>About</span>
+                        </a></li>
+
+                        <li><a href="#portfolio" class="nav-item">
+                            <i class="fas fa-rocket"></i><span>Projects</span>
+                        </a></li>
+
+                        <li><a href="#contact" class="nav-item">
+                            <i class="fas fa-envelope"></i><span>Contact</span>
+                        </a></li>
+                    </ul>
+
+                    <button class="nav-cta" id="openModal">
+                        Let’s Connect
+                    </button>
+
+                    <!-- Hamburger -->
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+            </nav>
+            <div class="mobile-overlay" id="mobile-overlay"></div>
+        </header>
+
+        <div class="modal-overlay" id="modal">
+            <div class="modal">
+                <button class="close-btn" id="closeModal">&times;</button>
+
+                <h2>Internship Inquiry</h2>
+                <p class="modal-sub">
+                    Interested in offering me an internship opportunity? Let’s connect.
+                </p>
+
+                <form id="internshipForm">
+                    <div class="input-group">
+                        <input type="text" id="modal-name" name="name" placeholder=" " required autocomplete="name">
+                        <label for="modal-name">Your Name</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="modal-email" name="email" placeholder=" " required autocomplete="email">
+                        <label for="modal-email">Your Email</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" id="modal-company" name="company" placeholder=" " autocomplete="organization">
+                        <label for="modal-company">Company Name</label>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea id="modal-message" name="message" rows="4" placeholder=" " required></textarea>
+                        <label for="modal-message">Message</label>
+                    </div>
+
+                    <!-- hidden subject from modal -->
+                    <input type="hidden" name="_subject" value="New Internship Inquiry">
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+
+                <p id="modalStatus" style="margin-top:15px; font-size:14px;"></p>
+            </div>
+        </div>
+
+        <!-- ================= HERO ================= -->
+        <main id="home" class="container">
+
+            <section class="content">
+
+                <div class="badge">
+                    <i data-lucide="sparkles"></i>
+                    <span>Ready to Innovate</span>
+                </div>
+
+                <!-- PRIMARY TITLE -->
+                <h1>
+                    > Welcome_ <span class="highlight">Marc Canlas</span>
+                </h1>
+
+                <!-- ROLE -->
+                <h2 class="sub-headline">
+                    <span id="typing-text"></span><span class="cursor">|</span>
+                </h2>
+
+                <!-- DESCRIPTION -->
+                <p class="description">
+                    I’m a Frontend Developer with a strong eye for UI design, building clean, responsive, and user-centered web experiences. 
+                    I transform ideas into functional digital interfaces using modern web technologies.
+                </p>
+
+                <!-- TAGS -->
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Angular</span>
+                </div>
+
+                <!-- BUTTONS -->
+                <div class="btn-group">
+                    <a href="#projects" class="btn btn-primary">
+                        Projects <i data-lucide="external-link"></i>
+                    </a>
+                    <a href="https://github.com/Marc-WD" class="btn btn-secondary">
+                        Github <i data-lucide="github"></i>
+                    </a>
+
+            </section>
+
+            <section class="illustration">
+                <div class="art-container">
+                    
+                    <div class="tv-screen">
+                        <img id="project-preview" src="project1.jpg" alt="Project Preview">
+
+                        <div class="project-overlay">
+                            <h3 id="project-title">Project One</h3>
+                            <a id="project-link" href="#" target="_blank">View Project →</a>
+                        </div>
+
+                        <div class="screen-glow"></div>
+                    </div>
+
+                    <div class="floating-icon html"><span>HTML</span></div>
+                    <div class="floating-icon css"><span>CSS</span></div>
+                    <div class="floating-icon js"><span>JS</span></div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ================= ABOUT ================= -->
+        <section id="about" class="about-section">
+            <div class="about-header">
+                <h2 class="section-heading">About Me</h2>
+                <p class="tagline">✨ Transforming ideas into digital experiences ✨</p>
+            </div>
+
+            <div class="about-hero">
+                <div class="about-text">
+                    <h3 class="hello-text">PROFILE</h3>
+                    <h1 class="main-name">The Developer Behind the Code</h1>
+                    <p class="bio-description">
+                        I enjoy transforming ideas into interactive and visually refined digital experiences. 
+                        My approach combines structured code, thoughtful interface design, and continuous learning to create web applications that are both functional and engaging.
+                    </p>
+                    <div class="about-actions">
+                            <a href="img/assets/marc_canlas_resume.pdf" 
+                            class="btn-cv" 
+                            download="marc_canlas_resume.pdf">
+                            <i class="fas fa-file-download"></i> Download Resume
+                            </a>
+                        <a href="profile.html" class="btn-projects"><i class="fas fa-code"></i> View Profile</a>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="profile-glow-circle">
+                        <img src="img/assets/profile.png" alt="Marc Canlas" class="profile-img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <div class="stat-icon"><i class="fas fa-code"></i></div>
+                        <span class="stat-number">3</span>
+                    </div>
+                    <h4>TOTAL PROJECTS</h4>
+                    <p>Innovative web solutions crafted</p>
+                    <a href="#portfolio"><i class="fas fa-arrow-right stat-arrow"></i></a>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <div class="stat-icon"><i class="fas fa-award"></i></div>
+                        <span class="stat-number">4</span>
+                    </div>
+                    <h4>CERTIFICATES</h4>
+                    <p>Professional skills validated</p>
+                    <a href="profile.html#certifications"><i class="fas fa-arrow-right stat-arrow"></i></a>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-top">
+                        <div class="stat-icon"><i class="fas fa-globe"></i></div>
+                        <span class="stat-number">2</span>
+                    </div>
+                    <h4>YEARS OF LEARNING</h4>
+                    <p>Continuous learning journey</p>
+                    <a href="profile.html#profile"><i class="fas fa-arrow-right stat-arrow"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PORTFOLIO ================= -->
+        <section class="portfolio-section" id="portfolio">
+            <div class="portfolio-header">
+                <h2 class="section-title">Portfolio Showcase</h2>
+                <p>✨ Explore my journey through projects, certifications, and technical expertise. ✨</p>
+            </div>
+
+            <div class="portfolio-grid active" id="projects">
+                <div class="portfolio-card">
+                    <div class="card-media"><img src="img/panlasa_trip_album.png" alt="panlasa trip album"></div>
+                    <div class="card-body">
+                        <h3>Panlasa Trip</h3>
+                        <p>Automated arithmetic solution engine built for fast and accurate mathematical computation.</p>
+                        <div class="card-actions">
+                            <a href="https://panlasatrip.wordpress.com/">Live Demo</a>
+                            <a href="projects/project1.html"><button>Details →</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card video-card">
+                    <div class="card-media">
+                        <img src="img/singku_website_album.png" alt="singku inspired website album">
+                    </div>
+                    <div class="card-body">
+                        <h3>Singku Inspired Café Website</h3>
+                        <p>Discord automation platform for scheduled message delivery and workflow management.</p>
+                        <div class="card-actions">
+                            <a href="https://marc-wd.github.io/MidtermProj_Major-Pages/#home">Live Demo</a>
+                            <a href="projects/project2.html"><button>Details →</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="card-media"><img src="img/aurumelle_pastries_album.png" alt="aurumelle pastries album"></div>
+                    <div class="card-body">
+                        <h3>Aurumelle Pastries</h3>
+                        <p>Structured digital notebook application for organizing and managing daily notes.</p>
+                        <div class="card-actions">
+                            <a href="https://aurumelle-pastries.wuaze.com/login.php">Live Demo</a>
+                            <a href="projects/project3.html"><button>Details →</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TESTIMONIALS ================= -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="container">
+                <div class="portfolio-header">
+                    <h2 class="section-title">Client <span class="highlight">Feedback</span></h2>
+                    <p>✨ Collaborating with teams to build impactful digital solutions. ✨</p>
+                </div>
+
+                <div class="wall-viewport">
+                    <div class="marquee-track row-left" id="track1">
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"Marc's attention to detail in frontend architecture is impressive. He delivered a pixel-perfect React solution ahead of schedule."</p>
+                            <div class="footer">
+                                <div class="avatar">JS</div>
+                                <div class="info"><h4>Josh Stone</h4><p>Creative Director</p></div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"The interface is incredibly intuitive. We've seen a significant increase in user engagement since the update."</p>
+                            <div class="footer">
+                                <div class="avatar">AM</div>
+                                <div class="info"><h4>Aimee Morgan</h4><p>Engineering Lead</p></div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"Professional, communicative, and technically proficient. A rare find for a junior developer."</p>
+                            <div class="footer">
+                                <div class="avatar">JL</div>
+                                <div class="info"><h4>James Lee</h4><p>Head of Product</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="marquee-track row-right" id="track2">
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"Real-time collaboration was seamless. Marc understands how to build for the end-user."</p>
+                            <div class="footer">
+                                <div class="avatar">MT</div>
+                                <div class="info"><h4>Marcus Thorne</h4><p>CTO @ TechFlow</p></div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"Highly skilled in modern CSS and React patterns. His work is clean and highly maintainable."</p>
+                            <div class="footer">
+                                <div class="avatar">DL</div>
+                                <div class="info"><h4>Diana Lopez</h4><p>Operations Director</p></div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="content">"A beautifully designed platform with serious power under the hood. He's a great asset to any team."</p>
+                            <div class="footer">
+                                <div class="avatar">RK</div>
+                                <div class="info"><h4>Ryan Kim</h4><p>Founder</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT ================= -->
+        <section id="contact" class="contact-section">
+            <div class="contact-container">
+                <div class="contact-header">
+                    <p class="sub-title">Get In Touch</p>
+                    <p>✨ Open to collaborations, freelance projects, and opportunities. Let’s build something great together. ✨</p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <div class="info-side">
+                        <div class="card email-card">
+                            <div class="icon-box"><i class="fa-regular fa-envelope"></i></div>
+                            <div class="card-content">
+                                <p class="label">OFFICIAL EMAIL</p>
+                                <p class="value">m4canlas@gmail.com</p>
+                            </div>
+                            <i class="fa-regular fa-copy copy-icon" 
+                                title="Copy Email"
+                                onclick="copyEmail()"></i>
+                        </div>
+
+                        <div class="card location-card">
+                            <div class="icon-box location-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="card-content">
+                                <p class="label">BASE LOCATION</p>
+                                <p class="value">Angeles City, Philippines</p>
+                            </div>
+                        </div>
+
+                        <div class="social-row">
+                            <a href="https://www.linkedin.com/in/marc-ordonez-canlas-a34320311/" class="card social-card">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://www.facebook.com/marcordonez.canlas.906" class="card social-card">
+                                <i class="fa-brands fa-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="form-side card">
+                        <div class="window-controls">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+
+                        <h3 class="form-title">Send Message_</h3>
+
+                        <form id="contactFormMain">
+                            <div class="form-input-row">
+                                <input type="text" name="name" placeholder="Name" required>
+                                <input type="email" name="email" placeholder="Email Address" required>
+                            </div>
+
+                            <select name="service" required>
+                                <option value="">Select Service</option>
+                                <option>UI/UX Design</option>
+                                <option>Frontend Development</option>
+                                <option>Landing Page Design</option>
+                                <option>Website Redesign</option>
+                                <option>other</option>
+                            </select>
+
+                            <textarea name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+
+                            <button type="submit" class="send-btn">
+                                Send Message <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </form>
+
+                        <p id="formStatus" style="margin-top:15px; font-size:14px;"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="footer-section">
+            <div class="footer-container">
+                
+                <div class="footer-cta">
+                    <p class="cta-subtitle">WHAT'S NEXT?</p>
+                    <h2 class="cta-title">
+                        Let's build something <br>
+                        <span class="gradient-text">legendary together.</span>
+                    </h2>
+                    <a href="mailto:m4canlas@gmail.com" class="email-link">
+                        m4canlas@gmail.com <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <hr class="footer-divider">
+
+                <div class="footer-bottom">
+                    <div class="footer-nav">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#portfolio">Project</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+
+                    <div class="footer-socials">
+                        <a href="https://github.com/Marc-WD" class="social-circle"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/marc-ordonez-canlas-a34320311/" class="social-circle"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/marcordonez.canlas.906" class="social-circle"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-info">
+                    <p class="copyright">© 2026 Marc O. Canlas.</p>
+                </div>
+            </div>
+
+            <a href="#home" class="scroll-top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </footer>
+
+        <script src="js/script.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurumelle Pastries | Project Details</title>
+    <link rel="icon" type="image/png" sizes="64x64" href="../img/assets/logo.png">
+    <link rel="stylesheet" href="../styles/project.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <div class="page-container">
+        <nav class="nav-bar">
+            <button class="back-btn" onclick="window.history.back()">
+                <i data-lucide="arrow-left"></i> Back
+            </button>
+            <div class="breadcrumb">
+                Projects <span class="separator">&rsaquo; Aurumelle Pastries</span> 
+            </div>
+        </nav>
+
+        <main class="content-grid">
+            <section class="info-panel">
+                <div class="title-group">
+                    <h1 class="main-title">Aurumelle_Pastries</h1>
+                    <div class="gradient-line"></div>
+                </div>
+
+                <p class="project-description">
+                    Aurumelle Pastries is an e-commerce website designed to provide customers with a convenient and secure way to purchase pastries and desserts online. <br><br>
+                    The system supports two user roles: Customer and Administrator. Customers can browse products, add items to their cart or wishlist, place orders, and track payment status, while administrators manage products, orders, and user accounts through a dedicated dashboard. <br><br>
+                    The platform is built using HTML, CSS, JavaScript, PHP, and MySQL, aiming to improve the overall online purchasing experience through efficient order processing and secure data management.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <i data-lucide="code-2" class="purple-icon"></i>
+                        <div class="stat-content">
+                            <span class="stat-value">5</span>
+                            <span class="stat-label">Total Technologies</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i data-lucide="layers" class="purple-icon"></i>
+                        <div class="stat-content">
+                            <span class="stat-value">6 - 8</span>
+                            <span class="stat-label">Main Features</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button-row">
+                    <a href="https://aurumelle-pastries.wuaze.com/login.php" class="btn btn-outline">
+                        <i data-lucide="external-link"></i> Live Demo
+                    </a>
+                    <a href="https://github.com/mocanlas/Aurumelle_Pastries_Project" class="btn btn-gradient">
+                        <i data-lucide="github"></i> Github
+                    </a>
+                </div>
+
+                <div class="tech-stack">
+                    <h3 class="section-title"><i data-lucide="code"></i> Technologies Used</h3>
+                    <div class="tech-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                        <span>PHP</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="media-panel">
+                <div class="video-container">
+                    <img src="../img/project_aurumelle_bg.png" alt="Preview">
+                </div>
+
+                <div class="features-card">
+                    <h3 class="feature-title"><i data-lucide="star"></i> Key Features</h3>
+                    <ul class="feature-list">
+                        <li>Secure registration and login system with profile management for customers and administrative control for admins.</li>
+                        <li>Displays product images, descriptions, and prices with search functionality for easy browsing.</li>
+                        <li>Allows customers to add products to a shopping cart and review order summaries before checkout.</li>
+                        <li>Customers can track order status, while admins can update order progress (Pending or Completed).</li>
+                        <li>Stores user data, product details, and transactions securely using a MySQL database.</li>
+                        <li>Provides sales reports, order statistics, and user management tools for business monitoring.</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
